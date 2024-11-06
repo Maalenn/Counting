@@ -11,6 +11,9 @@ function counting() {
 }
 
 function startCounting() {
+  if (intervalId !== null) {
+    clearInterval(intervalId);
+  }
   intervalId = setInterval(counting, 1000);
 }
 
